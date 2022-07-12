@@ -1,0 +1,34 @@
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking sources
+unpacking source archive /nix/store/83yb69pah0grihaq1yr83jn61n41xscq-JuicyPixels-3.3.7.tar.gz
+source root is JuicyPixels-3.3.7
+setting SOURCE_DATE_EPOCH to timestamp 1646865685 of file JuicyPixels-3.3.7/src/Codec/Picture/Jpg.hs
+@nix { "action": "setPhase", "phase": "patchPhase" }
+patching sources
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+configuring
+Configure flags:
+--prefix=/nix/store/7054iw79zqb7ikqvsn5g8mzj3byknmgp-JuicyPixels-lib-JuicyPixels-armv7l-unknown-linux-gnueabihf-3.3.7 lib:JuicyPixels --package-db=clear --package-db=/nix/store/isi5gpxvlr3s4mmj62hjfmbglzigys65-armv7l-unknown-linux-gnueabihf-JuicyPixels-lib-JuicyPixels-3.3.7-config/lib/armv7l-unknown-linux-gnueabihf-ghc-9.2.3/package.conf.d --flags=-mmap --exact-configuration --dependency=bytestring=bytestring-0.11.3.1-2Ol5B8y9o7dD4IJcoCEM0Z --dependency=mtl=mtl-2.2.2-HhFxDDPUiQ1FBhlKDwVnr6 --dependency=binary=binary-0.8.9.0-3xcTgXXkZHE85HRwGgyA6q --dependency=zlib=zlib-0.6.3.0-DcYreomJRmlGVZFMZbcPPv --dependency=transformers=transformers-0.5.6.2-6oYLJTvwHu7IJotjDUgOmp --dependency=vector=vector-0.12.3.1-BUP28lOWLx7FL7jSLrg2k2 --dependency=primitive=primitive-0.7.4.0-3mjaCDZUN0gJfLgGzZbQFh --dependency=containers=containers-0.6.5.1-1mJ1aiYFxjS4zGVm0SPbaq --dependency=array=array-0.5.4.0 --dependency=base=base-4.16.2.0 --dependency=deepseq=deepseq-1.4.6.1 --dependency=ghc-bignum=ghc-bignum-1.2 --dependency=ghc-boot-th=ghc-boot-th-9.2.3 --dependency=ghc-prim=ghc-prim-0.8.0 --dependency=integer-gmp=integer-gmp-1.1 --dependency=pretty=pretty-1.1.3.6 --dependency=rts=rts --dependency=template-haskell=template-haskell-2.18.0.0 --with-ghc=armv7l-unknown-linux-gnueabihf-ghc --with-ghc-pkg=armv7l-unknown-linux-gnueabihf-ghc-pkg --with-hsc2hs=armv7l-unknown-linux-gnueabihf-hsc2hs --with-gcc=armv7l-unknown-linux-gnueabihf-cc --with-ld=armv7l-unknown-linux-gnueabihf-ld.gold --ghc-option=-optl-fuse-ld=gold --ld-option=-fuse-ld=gold --with-ar=armv7l-unknown-linux-gnueabihf-ar --with-strip=armv7l-unknown-linux-gnueabihf-strip --disable-executable-stripping --disable-library-stripping --disable-library-profiling --disable-profiling --enable-static --disable-shared --disable-coverage --enable-library-for-ghci --datadir=/nix/store/w9mjdh4dy7gi0qp6iifp37a35hkn46wg-JuicyPixels-lib-JuicyPixels-armv7l-unknown-linux-gnueabihf-3.3.7-data/share/armv7l-unknown-linux-gnueabihf-ghc-9.2.3 --enable-split-sections --hsc2hs-option=--cross-compile --disable-split-sections --ghc-option=-fPIC --gcc-option=-fPIC --ghc-options=-j1 
+Warning: JuicyPixels.cabal:19:29: Packages with 'cabal-version: 1.12' or later
+should specify a specific version of the Cabal spec of the form
+'cabal-version: x.y'. Use 'cabal-version: 1.18'.
+Configuring library for JuicyPixels-3.3.7..
+@nix { "action": "setPhase", "phase": "buildPhase" }
+building
+Preprocessing library for JuicyPixels-3.3.7..
+Building library for JuicyPixels-3.3.7..
+[ 1 of 30] Compiling Codec.Picture.InternalHelper ( src/Codec/Picture/InternalHelper.hs, dist/build/Codec/Picture/InternalHelper.o )
+[ 2 of 30] Compiling Codec.Picture.Metadata.Exif ( src/Codec/Picture/Metadata/Exif.hs, dist/build/Codec/Picture/Metadata/Exif.o )
+[ 3 of 30] Compiling Codec.Picture.Metadata ( src/Codec/Picture/Metadata.hs, dist/build/Codec/Picture/Metadata.o )
+[ 4 of 30] Compiling Codec.Picture.Tiff.Internal.Types ( src/Codec/Picture/Tiff/Internal/Types.hs, dist/build/Codec/Picture/Tiff/Internal/Types.o )
+[ 5 of 30] Compiling Codec.Picture.Tiff.Internal.Metadata ( src/Codec/Picture/Tiff/Internal/Metadata.hs, dist/build/Codec/Picture/Tiff/Internal/Metadata.o )
+[ 6 of 30] Compiling Codec.Picture.Types ( src/Codec/Picture/Types.hs, dist/build/Codec/Picture/Types.o )
+---> Starting remote-iserv on port 8742
+---| remote-iserv should have started on 8742
+Listening on port 8742
+qemu: uncaught target signal 11 (Segmentation fault) - core dumped
+iserv-proxy: <socket: 4>: hGetBufSome: resource vanished (Connection reset by peer)
+/nix/store/gsk695dac5ryvp079bvrcm5i5m760prm-iserv-wrapper/bin/iserv-wrapper: line 10:   583 Segmentation fault      (core dumped) /nix/store/pdijlpvlixscsph1dvwn8914lsmx2zmz-qemu-6.2.0/bin/qemu-arm /nix/store/5ldy010djc29fc443i6izgky26fpkpj2-remote-iserv-exe-remote-iserv-armv7l-unknown-linux-gnueabihf-9.2.3/bin/remote-iserv tmp $PORT
+ghc: ghc-iserv terminated (1)

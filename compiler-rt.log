@@ -1,0 +1,272 @@
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking sources
+unpacking source archive /nix/store/xhc43z7x1wmx50j4a43i27vkyfp9fzf7-source
+source root is source/compiler-rt
+@nix { "action": "setPhase", "phase": "patchPhase" }
+patching sources
+applying patch /nix/store/5pi27cr43baazlvy239qdj4c1jzzbfv7-codesign.patch
+patching file cmake/Modules/AddCompilerRT.cmake
+applying patch /nix/store/pmw5l118lmhak47aqlz71a87xgaw3alb-X86-support-extension.patch
+patching file lib/builtins/CMakeLists.txt
+Hunk #1 succeeded at 344 (offset -1 lines).
+Hunk #2 succeeded at 707 with fuzz 2 (offset 95 lines).
+applying patch /nix/store/x0137mdpq76zfp2xvn3ncawys2g4c93i-normalize-var.patch
+patching file cmake/Modules/CompilerRTUtils.cmake
+Hunk #1 succeeded at 391 with fuzz 2 (offset 89 lines).
+applying patch /nix/store/jgqk8bhzzvwb8d3yjlmyk319mnrrphcg-armv7l.patch
+patching file cmake/builtin-config-ix.cmake
+patching file lib/builtins/CMakeLists.txt
+Hunk #1 succeeded at 559 with fuzz 2 (offset 4 lines).
+Hunk #2 succeeded at 712 with fuzz 2 (offset 6 lines).
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+configuring
+fixing cmake files...
+cmake flags: -DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY=OFF -DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_SKIP_BUILD_RPATH=ON -DBUILD_TESTING=OFF -DCMAKE_INSTALL_LOCALEDIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/share/locale -DCMAKE_INSTALL_LIBEXECDIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/libexec -DCMAKE_INSTALL_LIBDIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/lib -DCMAKE_INSTALL_DOCDIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/share/doc/CompilerRT -DCMAKE_INSTALL_INFODIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/share/info -DCMAKE_INSTALL_MANDIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/share/man -DCMAKE_INSTALL_OLDINCLUDEDIR=/nix/store/96am0fpginv59wgd435xb7597xcny5n5-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1-dev/include -DCMAKE_INSTALL_INCLUDEDIR=/nix/store/96am0fpginv59wgd435xb7597xcny5n5-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1-dev/include -DCMAKE_INSTALL_SBINDIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/sbin -DCMAKE_INSTALL_BINDIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/bin -DCMAKE_INSTALL_NAME_DIR=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1/lib -DCMAKE_POLICY_DEFAULT_CMP0025=NEW -DCMAKE_OSX_SYSROOT= -DCMAKE_FIND_FRAMEWORK=LAST -DCMAKE_STRIP=/nix/store/ix4zyxsg5v9xdar8rbnsaydkm0290gzl-armv6l-unknown-linux-musleabihf-stage-final-gcc-debug-wrapper-10.3.0/bin/armv6l-unknown-linux-musleabihf-strip -DCMAKE_RANLIB=/nix/store/qq1lgxp56dc2iyqb2aprkjm81l0574ss-armv6l-unknown-linux-musleabihf-binutils-2.35.2/bin/armv6l-unknown-linux-musleabihf-ranlib -DCMAKE_AR=/nix/store/qq1lgxp56dc2iyqb2aprkjm81l0574ss-armv6l-unknown-linux-musleabihf-binutils-2.35.2/bin/armv6l-unknown-linux-musleabihf-ar -DCMAKE_C_COMPILER=armv6l-unknown-linux-musleabihf-gcc -DCMAKE_CXX_COMPILER=armv6l-unknown-linux-musleabihf-g++ -DCMAKE_INSTALL_PREFIX=/nix/store/36gmy7dg6s2isrsbhz116y3h26z3l5nr-compiler-rt-libc-armv6l-unknown-linux-musleabihf-13.0.1 -DCOMPILER_RT_DEFAULT_TARGET_ONLY=ON -DCMAKE_C_COMPILER_TARGET=armv6l-unknown-linux-musleabihf -DCMAKE_ASM_COMPILER_TARGET=armv6l-unknown-linux-musleabihf -DCOMPILER_RT_BUILD_LIBFUZZER=OFF -DCOMPILER_RT_BUILD_SANITIZERS=OFF -DCOMPILER_RT_BUILD_XRAY=OFF -DCOMPILER_RT_BUILD_PROFILE=OFF -DCOMPILER_RT_BUILD_MEMPROF=OFF -DCOMPILER_RT_BUILD_ORC=OFF -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=armv6l -DCMAKE_HOST_SYSTEM_NAME=Linux -DCMAKE_HOST_SYSTEM_PROCESSOR=x86_64 
+-- The C compiler identification is GNU 10.3.0
+-- The CXX compiler identification is GNU 10.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /nix/store/ix4zyxsg5v9xdar8rbnsaydkm0290gzl-armv6l-unknown-linux-musleabihf-stage-final-gcc-debug-wrapper-10.3.0/bin/armv6l-unknown-linux-musleabihf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /nix/store/ix4zyxsg5v9xdar8rbnsaydkm0290gzl-armv6l-unknown-linux-musleabihf-stage-final-gcc-debug-wrapper-10.3.0/bin/armv6l-unknown-linux-musleabihf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /nix/store/ix4zyxsg5v9xdar8rbnsaydkm0290gzl-armv6l-unknown-linux-musleabihf-stage-final-gcc-debug-wrapper-10.3.0/bin/armv6l-unknown-linux-musleabihf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for unwind.h
+-- Looking for unwind.h - found
+-- Looking for rpc/xdr.h
+-- Looking for rpc/xdr.h - not found
+[33mCMake Warning at cmake/Modules/CompilerRTUtils.cmake:352 (message):
+  llvm-config finding testingsupport failed with status 1
+Call Stack (most recent call first):
+  CMakeLists.txt:81 (load_llvm_config)
+
+[0m
+-- Could NOT find ZLIB (missing: ZLIB_LIBRARY ZLIB_INCLUDE_DIR) 
+-- Could NOT find LibXml2 (missing: LIBXML2_LIBRARY LIBXML2_INCLUDE_DIR) 
+-- LLVM_MAIN_SRC_DIR: "/build/source/llvm"
+-- Found Python3: /nix/store/hb1lzaisgx2m9n29hqhh6yp6hasplq1v-python3-3.9.10/bin/python3.9 (found version "3.9.10") found components: Interpreter 
+-- Looking for __thumb__
+-- Looking for __thumb__ - not found
+-- Looking for fopen in c
+-- Looking for fopen in c - found
+-- Looking for __gcc_personality_v0 in gcc_s
+-- Looking for __gcc_personality_v0 in gcc_s - found
+-- Performing Test COMPILER_RT_HAS_NODEFAULTLIBS_FLAG
+-- Performing Test COMPILER_RT_HAS_NODEFAULTLIBS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FFREESTANDING_FLAG
+-- Performing Test COMPILER_RT_HAS_FFREESTANDING_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_OMIT_FRAME_POINTER_FLAG
+-- Performing Test COMPILER_RT_HAS_OMIT_FRAME_POINTER_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_STD_C11_FLAG
+-- Performing Test COMPILER_RT_HAS_STD_C11_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FPIC_FLAG
+-- Performing Test COMPILER_RT_HAS_FPIC_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FPIE_FLAG
+-- Performing Test COMPILER_RT_HAS_FPIE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_BUILTIN_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_BUILTIN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_EXCEPTIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_EXCEPTIONS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FOMIT_FRAME_POINTER_FLAG
+-- Performing Test COMPILER_RT_HAS_FOMIT_FRAME_POINTER_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FUNWIND_TABLES_FLAG
+-- Performing Test COMPILER_RT_HAS_FUNWIND_TABLES_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_STACK_PROTECTOR_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_STACK_PROTECTOR_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_SANITIZE_SAFE_STACK_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_SANITIZE_SAFE_STACK_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_HIDDEN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FRTTI_FLAG
+-- Performing Test COMPILER_RT_HAS_FRTTI_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_RTTI_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_RTTI_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_FUNCTION_SECTIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_FUNCTION_SECTIONS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_STD_CXX14_FLAG
+-- Performing Test COMPILER_RT_HAS_STD_CXX14_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FTLS_MODEL_INITIAL_EXEC
+-- Performing Test COMPILER_RT_HAS_FTLS_MODEL_INITIAL_EXEC - Success
+-- Performing Test COMPILER_RT_HAS_FNO_LTO_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_LTO_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_GENERATE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_GENERATE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_GENERATE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_GENERATE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_USE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_USE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MSSE3_FLAG
+-- Performing Test COMPILER_RT_HAS_MSSE3_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SYSROOT_FLAG
+-- Performing Test COMPILER_RT_HAS_SYSROOT_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_MCRC_FLAG
+-- Performing Test COMPILER_RT_HAS_MCRC_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_PARTIAL_INLINING_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PARTIAL_INLINING_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_GR_FLAG
+-- Performing Test COMPILER_RT_HAS_GR_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_GS_FLAG
+-- Performing Test COMPILER_RT_HAS_GS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MT_FLAG
+-- Performing Test COMPILER_RT_HAS_MT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_Oy_FLAG
+-- Performing Test COMPILER_RT_HAS_Oy_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_GLINE_TABLES_ONLY_FLAG
+-- Performing Test COMPILER_RT_HAS_GLINE_TABLES_ONLY_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_G_FLAG
+-- Performing Test COMPILER_RT_HAS_G_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_Zi_FLAG
+-- Performing Test COMPILER_RT_HAS_Zi_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WALL_FLAG
+-- Performing Test COMPILER_RT_HAS_WALL_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WERROR_FLAG
+-- Performing Test COMPILER_RT_HAS_WERROR_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WFRAME_LARGER_THAN_FLAG
+-- Performing Test COMPILER_RT_HAS_WFRAME_LARGER_THAN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WGLOBAL_CONSTRUCTORS_FLAG
+-- Performing Test COMPILER_RT_HAS_WGLOBAL_CONSTRUCTORS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WC99_EXTENSIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_WC99_EXTENSIONS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WGNU_FLAG
+-- Performing Test COMPILER_RT_HAS_WGNU_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WNON_VIRTUAL_DTOR_FLAG
+-- Performing Test COMPILER_RT_HAS_WNON_VIRTUAL_DTOR_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WVARIADIC_MACROS_FLAG
+-- Performing Test COMPILER_RT_HAS_WVARIADIC_MACROS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WUNUSED_PARAMETER_FLAG
+-- Performing Test COMPILER_RT_HAS_WUNUSED_PARAMETER_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WCOVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test COMPILER_RT_HAS_WCOVERED_SWITCH_DEFAULT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WSUGGEST_OVERRIDE_FLAG
+-- Performing Test COMPILER_RT_HAS_WSUGGEST_OVERRIDE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WNO_PEDANTIC
+-- Performing Test COMPILER_RT_HAS_WNO_PEDANTIC - Success
+-- Performing Test COMPILER_RT_HAS_W4_FLAG
+-- Performing Test COMPILER_RT_HAS_W4_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WX_FLAG
+-- Performing Test COMPILER_RT_HAS_WX_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4146_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4146_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4291_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4291_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4221_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4221_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4391_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4391_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4722_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4722_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4800_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4800_FLAG - Failed
+-- Looking for __func__
+-- Looking for __func__ - found
+-- Performing Test COMPILER_RT_HAS_NOSTDINCXX_FLAG
+-- Performing Test COMPILER_RT_HAS_NOSTDINCXX_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_NOSTDLIBXX_FLAG
+-- Performing Test COMPILER_RT_HAS_NOSTDLIBXX_FLAG - Failed
+-- Looking for include file sys/auxv.h
+-- Looking for include file sys/auxv.h - found
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - found
+-- Looking for pow in m
+-- Looking for pow in m - found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Looking for backtrace in execinfo
+-- Looking for backtrace in execinfo - not found
+-- Looking for __cxa_throw in c++
+-- Looking for __cxa_throw in c++ - not found
+-- Looking for __cxa_throw in stdc++
+-- Looking for __cxa_throw in stdc++ - found
+-- Performing Test COMPILER_RT_HAS_Z_TEXT
+-- Performing Test COMPILER_RT_HAS_Z_TEXT - Success
+-- Performing Test COMPILER_RT_HAS_FUSE_LD_LLD_FLAG
+-- Performing Test COMPILER_RT_HAS_FUSE_LD_LLD_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_GNU_VERSION_SCRIPT_COMPAT
+-- Performing Test COMPILER_RT_HAS_GNU_VERSION_SCRIPT_COMPAT - Success
+-- Performing Test COMPILER_RT_HAS_VERSION_SCRIPT
+-- Performing Test COMPILER_RT_HAS_VERSION_SCRIPT - Success
+-- Compiler-RT supported architectures: armhf
+-- Performing Test COMPILER_RT_HAS_VISIBILITY_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_VISIBILITY_HIDDEN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FREESTANDING_FLAG
+-- Performing Test COMPILER_RT_HAS_FREESTANDING_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_XRAY_COMPILER_FLAG
+-- Performing Test COMPILER_RT_HAS_XRAY_COMPILER_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_ATOMIC_KEYWORD
+-- Performing Test COMPILER_RT_HAS_ATOMIC_KEYWORD - Success
+-- Performing Test COMPILER_RT_HAS_FLOAT16
+-- Performing Test COMPILER_RT_HAS_FLOAT16 - Failed
+-- Performing Test COMPILER_RT_HAS_ASM_LSE
+-- Performing Test COMPILER_RT_HAS_ASM_LSE - Failed
+-- Builtin supported architectures: armhf
+[0march: armhf[0m
+-- Looking for __ARM_FP
+-- Looking for __ARM_FP - found
+-- For armhf builtins preferring arm/fp_mode.c to fp_mode.c
+-- For armhf builtins preferring arm/bswapdi2.S to bswapdi2.c
+-- For armhf builtins preferring arm/bswapsi2.S to bswapsi2.c
+-- For armhf builtins preferring arm/clzdi2.S to clzdi2.c
+-- For armhf builtins preferring arm/clzsi2.S to clzsi2.c
+-- For armhf builtins preferring arm/comparesf2.S to comparesf2.c
+-- For armhf builtins preferring arm/divmodsi4.S to divmodsi4.c
+-- For armhf builtins preferring arm/divsi3.S to divsi3.c
+-- For armhf builtins preferring arm/modsi3.S to modsi3.c
+-- For armhf builtins preferring arm/udivmodsi4.S to udivmodsi4.c
+-- For armhf builtins preferring arm/udivsi3.S to udivsi3.c
+-- For armhf builtins preferring arm/umodsi3.S to umodsi3.c
+-- Configuring done
+-- Generating done
+[33mCMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+    CMAKE_EXPORT_NO_PACKAGE_REGISTRY
+    CMAKE_INSTALL_BINDIR
+    CMAKE_INSTALL_DOCDIR
+    CMAKE_INSTALL_INCLUDEDIR
+    CMAKE_INSTALL_INFODIR
+    CMAKE_INSTALL_LIBDIR
+    CMAKE_INSTALL_LIBEXECDIR
+    CMAKE_INSTALL_LOCALEDIR
+    CMAKE_INSTALL_MANDIR
+    CMAKE_INSTALL_OLDINCLUDEDIR
+    CMAKE_INSTALL_SBINDIR
+    CMAKE_POLICY_DEFAULT_CMP0025
+
+[0m
+-- Build files have been written to: /build/source/compiler-rt/build
+cmake: enabled parallel building
+@nix { "action": "setPhase", "phase": "buildPhase" }
+building
+build flags: -j8 -l8 SHELL=/nix/store/dndi916j6yxzfzzj2sma2llhrlwahq06-bash-5.1-p16/bin/bash
+[  1%] [34m[1mBuilding C object clang_rt.crtend-armhf.o[0m
+[  1%] Built target clang_rt.crtend-armhf
+[35m[1mScanning dependencies of target clang_rt.builtins-armhf[0m
+[  1%] [32mBuilding C object lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/arm/fp_mode.c.o[0m
+[  2%] [32mBuilding ASM object lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/arm/comparesf2.S.o[0m
+[  2%] [32mBuilding ASM object lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/arm/divmodsi4.S.o[0m
+[  3%] [32mBuilding ASM object lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/arm/divsi3.S.o[0m
+[  3%] [32mBuilding ASM object lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/arm/modsi3.S.o[0m
+[  4%] [32mBuilding ASM object lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/arm/sync_fetch_and_add_4.S.o[0m
+/build/source/compiler-rt/lib/builtins/arm/sync_fetch_and_add_4.S: Assembler messages:
+/build/source/compiler-rt/lib/builtins/arm/sync_fetch_and_add_4.S:19: Error: selected processor does not support `dmb' in Thumb mode
+/build/source/compiler-rt/lib/builtins/arm/sync_fetch_and_add_4.S:19: Error: selected processor does not support `ldrex r0,[r12]' in Thumb mode
+/build/source/compiler-rt/lib/builtins/arm/sync_fetch_and_add_4.S:19: Error: cannot honor width suffix -- `add r2,r0,r1'
+/build/source/compiler-rt/lib/builtins/arm/sync_fetch_and_add_4.S:19: Error: selected processor does not support `strex r3,r2,[r12]' in Thumb mode
+/build/source/compiler-rt/lib/builtins/arm/sync_fetch_and_add_4.S:19: Error: selected processor does not support `dmb' in Thumb mode
+make[2]: *** [lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/build.make:193: lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/arm/sync_fetch_and_add_4.S.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:513: lib/builtins/CMakeFiles/clang_rt.builtins-armhf.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2
